@@ -95,8 +95,10 @@ extension ViewController: UIScrollViewDelegate {
         
         if scroll < -150 {
             imageView.image = UIImage(named: "after")
+            imageView.contentMode = .scaleAspectFill
         } else if scroll > -150 {
             imageView.image = UIImage(named: "before")
+            imageView.contentMode = .scaleAspectFit
         }
     }
 }
